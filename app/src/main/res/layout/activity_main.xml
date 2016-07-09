@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--主体-->
+        <FrameLayout
+            android:id="@+id/realtabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!--小横线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="4dp"
+            android:background="@color/colorAccent"/>
+        <!--底部排版-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--底部-->
+            <android.support.v4.app.FragmentTabHost
+                android:id="@android:id/tabhost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/windows_gb"
+                android:padding="5dp"/>
+
+            <!--+号按钮-->
+            <ImageView
+                android:id="@+id/main_iv_quick"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/selector_ic_nav_quick"/>
+
+            <!--小横线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_above="@id/main_iv_quick"
+                android:background="@color/colorAccent"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
